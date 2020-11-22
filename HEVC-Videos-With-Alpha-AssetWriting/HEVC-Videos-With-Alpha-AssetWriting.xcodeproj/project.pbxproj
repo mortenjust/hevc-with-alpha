@@ -31,8 +31,8 @@
 		12DFD7AC2293118B00272454 /* lamp_DIFFUSE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_DIFFUSE.png; sourceTree = "<group>"; };
 		12DFD7AD2293118B00272454 /* lamp.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = lamp.dae; sourceTree = "<group>"; };
 		82D2A96082D2E96000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		9EF38D609EF3830000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
-		A151B1D0A151B4B000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = ../Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		9EF38D609EF3830000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		A151B1D0A151B4B000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = ../Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,6 @@
 				129A5AA82279683400E718E5 /* Sources */,
 				129A5AA92279683400E718E5 /* Frameworks */,
 				129A5AAA2279683400E718E5 /* Resources */,
-				F145F920F145F9A000000001,
 			);
 			buildRules = (
 			);
@@ -328,7 +327,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UDGLB23X37;
 				INFOPLIST_FILE = "HEVC-Videos-With-Alpha-AssetWriting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,7 +348,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UDGLB23X37;
 				INFOPLIST_FILE = "HEVC-Videos-With-Alpha-AssetWriting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

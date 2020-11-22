@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, SCNSceneRendererDelegate {
     
     // Metal Rendering
     let renderer = SCNRenderer(device: nil, options: nil)
+    
     var lampMaterials: SCNNode!
     var metalTextureCache: CVMetalTextureCache!
     
@@ -43,6 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, SCNSceneRendererDelegate {
         // Setup Scene renderer
         renderer.scene = scene
         renderer.delegate = self
+        renderer.isJitteringEnabled = true
         
         // Retrieve the lamp node to animate
         lampMaterials = scene.rootNode.childNode(
@@ -145,7 +147,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, SCNSceneRendererDelegate {
                 ] as [String: Any]
             let videoWriter = AVAssetWriterInput(mediaType: .video, outputSettings: outputSettings)
             videoWriter.expectsMediaDataInRealTime = false
-            
+                
             let pixelBufferAttributes = [
                 kCVPixelBufferPixelFormatTypeKey: kCVPixelFormatType_32BGRA,
                 kCVPixelBufferWidthKey: ExportSettings.width,
@@ -180,6 +182,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, SCNSceneRendererDelegate {
                 // Ask metal to render the next frame and wait for it to complete
                 let pendingFrame = DispatchSemaphore(value: 0)
                 let pixelBufferPoolForRendering = pixelBufferAdaptor.pixelBufferPool!
+                
                 self.renderNextFrameAsynchronously(using: pixelBufferPoolForRendering) { resultFrame, presentationTime in
                     if let renderedFrame = resultFrame {
                         let success = pixelBufferAdaptor.append(renderedFrame, withPresentationTime: presentationTime)
